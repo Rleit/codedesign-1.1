@@ -4,16 +4,16 @@ var canvas = document.getElementById('acanvas');
 var ctx = canvas.getContext('2d');
 
 //Call the image on load
-var img4128 = new Image();
+var img = new Image();
 
 //imagename
-img4128.onload = function() {
+img.onload = function() {
   start();
 
 }
 
 //define the source of the image
-img4128.src = "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57730/land_ocean_ice_2048.jpg";
+img.src = "https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57730/land_ocean_ice_2048.jpg";
 
 
 
@@ -47,7 +47,7 @@ function start() {
     ctx.globalAlpha = .50;
 
     //draws image on globe with var x changable on top
-    ctx.drawImage(img4128, x - 1900, -100);
+    ctx.drawImage(img, x - 1900, -100);
 
     //make globe transparent for shadows later on
     ctx.globalAlpha = 1.00;
